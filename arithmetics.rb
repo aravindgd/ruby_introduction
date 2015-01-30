@@ -1,0 +1,18 @@
+puts "lets look at some common arithmetics"
+a = 10
+b = 2
+puts "a = #{a}"
+puts "b = #{b}"
+puts "a+b = #{a+b}"
+puts "a-b = #{a-b}"
+puts "a*b = #{a*b}"
+puts "a/b = #{a/b}"
+puts "a%b = #{a%b}"
+puts "a**b = #{a**b}"
+puts "a < b = #{a<b}"
+puts "a > b = #{a>b}"
+puts "a <= b = #{a<=b}"
+puts "a >= b = #{a>=b}"
+puts "a == b = #{a==b}"
+puts "see the magic: 1/1.5 = #{1/1.5}"
+puts "see the magic: 1.2/2 = #{1.2/2}"

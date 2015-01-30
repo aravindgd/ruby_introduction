@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Introduction to Ruby on Rails - Web development that doesn’t hurt</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A framework for building web applications">
+		<meta name="author" content="Aravind Gopalakrishnan">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -41,368 +41,593 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					Introduction to
+					<h1>Ruby on Rails</h1>
+					<h3>Web development that doesn’t hurt</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>by Aravind Gopalakrishnan / <a href="http://twitter.com/aravindgd">@aravindgd</a></small>
 					</p>
 				</section>
 
 				<section>
 					<h2>Hello There</h2>
 					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+						We are going to learn Ruby on Rails to build Web Applications.
 					</p>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
+					<h2>Why Ruby?</h2>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li> Highly readable </li>
+						<li> There is more than one way of doing something </li>
+						<li> Sapir-Whorf hypothesis</li>
+						<li> Ruby is like the English language </li>
+						<li> Ability to easily build DSLs </li>
+						<li> Moore's Law: Number of transistors in LSI double every 18 months </li>
+						<li> Fast 'enough' </li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+					<h2>There is more than one way of doing something</h2>
+<pre>
+						<code>
+you = "aravind"
+unless you == "aravind"
+	puts "good boy"
+end
+#the below is same as above
+you = "aravind"
+if not you == "aravind"
+	puts "good boy"
+end
+						</code>
+					</pre>	
 				</section>
 
 				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							<tr>
+					<h2>Sapir-Whorf hypothesis</h2>
+					<p>
+						Languages determine the way we think
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<small> *An interesting <a href= "http://edge.org/conversation/how-does-our-language-shape-the-way-we-think">read</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Ruby is like the English language</h2>
+					<pre>
+							<code>
+5.times { print "I love Trichy" }
+exit unless "workshop".include? "cool stuff"
+['', 'ajit', 'vada'].each { |name| puts name.capitalize  }
+							</code>
+						</pre>
+				</section>
+
+				<section>
+					<h2>Ability to easily build *DSL</h2>
+					Example of DSL: 
+					<pre>
+						<code>
+resources :consulting_location_doctor_schedules
+namespace :admin do
+	resources :appointments, except: [:new, :create, :edit, :update] do
+		get :cancel_appointment, on: :member
+		get :users, on: :collection
+		get :doctors, on: :collection
+		get :confirm_appointment, on: :member
+	end
+end
+						</code>
+					</pre>
+					<br>
+					<br>
+					<br>
+					<hr>
+					<small>
+						*<a href="http://www.martinfowler.com/bliki/DomainSpecificLanguage.html">Domain Specific Language(DSL)</a> is “a programming language of limited expressiveness focused on a particular domain”. A way to express a logic specific to a particular domain without needing to write too much extraneous code 
+					</small>
+				</section>
+
+				<section>
+					<h2>Highly Readable</h2>
+					<pre><code data-trim contenteditable>
+unless value.blank?
+	puts value.reverse
+end
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Add two numbers in c</h2>
+
+					<pre><code data-trim contenteditable>
+#include<stdio.h>
+
+int main()
+{
+	 int a, b, c;
+
+	 a = 1;
+	 b = 2;
+
+	 c = a + b;
+
+	 printf("Sum of entered numbers = %d\n",c);
+
+	 return 0;
+}
+</code>
+</pre>
+				</section>
+				<section>
+					<h2>Add two numbers in c++</h2>
+
+					<pre><code data-trim contenteditable>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	 int a, b, c;
+	 a = 1;
+	 b = 2;
+	 c = a + b;
+	 cout <<"Sum of entered numbers = " << c << endl;
+
+	 return 0;
+}
+</code>
+</pre>
+				</section>
+				<section>
+					<h2> Add two numbers in java </h2>
+					<pre><code data-trim contenteditable>
+class AddNumbers
+{
+	 public static void main(String args[])
+	 {
+			int x, y, z;
+			x = 1;
+			y = 2;
+			z = x + y;
+			System.out.println("Sum of entered integers = "+z);
+	 }
+}
+</code>
+</pre>
+				</section>
+
+				<section>
+					<img src="aint_nobody_got_time_for_that.jpeg">
+				</section>
+
+				<section>
+					<h2> Add two numbers in ruby</h2>
+					<pre><code data-trim contenteditable>
+a,b = 1,2
+puts a+b
+				</code></pre>
+
+					<img src="ruby_y_u_so_easy.jpg">
+				</section>
+
+				<section>
+					<h3> We will learn MRI ruby version 2.2.0 </h3> 
+					<p>Matz's Ruby Interpreter or Ruby MRI (also called CRuby) is the reference implementation of the Ruby programming language named after Ruby creator Yukihiro Matsumoto ("Matz")</p>
+					<p> Some other famous implementation of Ruby </p>
+					<ul>
+						<li> JRuby </li>
+						<li> Rubinious </li>
+						<li> IronRuby </li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h2> Some more fun facts about ruby </h2>
+					<ul>
+						<li> Ruby is a fully object oriented programming language </li>
+						<li> Ruby is a interpreted language </li>
+						<li> Ruby comes with a default interpreter called irb, invoke it by typing `irb` in terminal </li>
+						<li> Ruby MRI is written in C </li>
+						<li> Ruby has file extension `.rb` and executed as 'ruby filename.rb'
+						</ul>
+					<pre><code>ruby filename.rb</code></pre>
+					</section>
+
+					<section>
+						<h2> Comments in Ruby </h2>
+						<pre><code data-trim contenteditable>
+#Hello I am comment
+#I am a comment again
+=begin
+	This is a multi line comment. This is discouraged though. Rather than this just use hash syntax with hash before each line. This is discouraged because it does not look well in big code blocks.
+=end
+				</code></pre>
+					</section>
+
+					<section>
+						<h2>Variables in Ruby and printing them</h2>
+						<pre><code>
+string_ex = "asd"
+integer_ex = 2
+1a = "test" #not valid
+a1 = "test"
+var = "I am a var"
+puts "string_ex = #{string_ex}"
+puts "integer_ex = #{integer_ex}"
+puts "a1 = #{a1}"
+p var
+
+					</code></pre>
+						OUTPUT:
+						<code><pre>
+string_ex = asd
+integer_ex = 2
+a1 = test
+I am a var
+</code></pre>
+					</section>
+
+					<section>
+						<h2> Arithmetics in ruby </h2>
+						<ul>
+							<li> + plus</li>
+							<li> - minus</li>
+							<li> / slash</li>
+							<li> * asterisk</li>
+							<li> ** powerof </li>
+							<li> % percent</li>
+							<li> &lt; less-than</li>
+							<li> &gt; greater-than</li>
+							<li> &lt; less-than-equal</li>
+							<li> &gt;= greater-than-equal</li>
+						</ul>
+					</section>
+
+					<section>
+						<pre><code>puts "lets look at some common arithmetics"
+a = 10
+b = 2
+puts "a = #{a}"
+puts "b = #{b}"
+puts "a+b = #{a+b}"
+puts "a-b = #{a-b}"
+puts "a*b = #{a*b}"
+puts "a/b = #{a/b}"
+puts "a%b = #{a%b}"
+puts "a**b = #{a**b}"
+
+puts "see the magic: 1/1.5 = #{1/1.5}"
+puts "see the magic: 1.2/2 = #{1.2/2}"</code></pre>
+				</section>
+				<section>
+					<pre><code>
+lets look at some common arithmetics
+a = 10
+b = 2
+a+b = 12
+a-b = 8
+a*b = 20
+a/b = 5
+a%b = 0
+a**b = 100
+
+see the magic: 1/1.5 = 0.6666666666666666
+see the magic: 1.2/2 = 0.6
+					</code></pre>
+			</section>
+
+			<section>
+				<img src="programming_or_magic.jpg">
+			</section>
+
+			<section>
+				<h2> Conditional operators </h2>
+				<ul>
+					<li>&& (and)</li>
+					<li>|| (or)</li>
+					<li>! (not)</li>
+					<li>!= (not equal)</li>
+					<li>== (equal)</li>
+					<li> &gt; greater-than</li>
+					<li> &lt; less-than-equal</li>
+					<li> &gt;= greater-than-equal</li>
+					<li> true </li>
+					<li> false </li>
+				</ul>
+			</section>
+			<section><pre><code>
+puts "a = #{a}"
+puts "b = #{b}"
+puts "a &lt; b = #{a&lt;b}"
+puts "a &gt; b = #{a&gt;b}"
+puts "a &lt;= b = #{a&lt;=b}"
+puts "a &gt;= b = #{a&lt;=b}"
+puts "a == b = #{a==b}"	
+puts "false && false = #{false && false}"
+puts "true && true = #{true && true}"
+puts "true && false = #{true && false}"
+puts "false || false = #{false || false}"
+puts "true || true = #{true || true}"
+puts "true || false = #{true || false}"
+
+</code></pre>
+		</section>
+			<section><pre><code>
+OUTPUT:
+a = 10
+b = 2
+a < b = false
+a > b = true
+a <= b = false
+a >= b = false
+a == b = false
+false && false = false
+true && true = true
+true && false = false
+false || false = false
+true || true = true
+true || false = true
+
+</code></pre>
+		</section>
+
+		<section>
+			<h2> Almost Everything in Ruby in an object </h2>
+			<img src="watwatwat.jpg">
+			<p> Don't panic! We will understand what this means gradually, but this is essential to keep in mind!</p>
+		</section>
+
+		<section>
+			<h2> Data Types </h2>
+
+			<big> There are <b>NO</b> primitive data types in Ruby, most of what you learned as primitive datatypes are objects here</big>
+			<pre><code>
+puts "1 is a #{1.class}"
+puts "1.4 is a #{1.5.class}"
+puts "hello is a #{"hello".class}"
+puts "[1, 2, 3] is a #{[1, 2, 3].class}"
+puts "[a, b, c] is a #{["a", "b", "c"].class}"
+puts "{key: 1, 'key' =&gt; 1,  1 =&gt; 2, :test =&gt; 'test_string'} is a #{{key: 1, 'key' =&gt; 1, 1 =&gt; 2, :test =&gt; 'test_string'}.class}"
+
+1 is a Fixnum
+1.4 is a Float
+hello is a String
+[1, 2, 3] is a Array
+[a, b, c] is a Array
+{key: 1, 'key' =&gt; 1,  1 =&gt; 2, :test =&gt; 'test_string'} is a Hash
+
+
+			</code></pre>
+		</section>
+
+
+		<section>
+			<h2> What is a web application framework?</h2>
+			<p>
+				A web application framework (WAF) is a software framework that is designed to support the development of dynamic websites, web applications, web services and web resources. The framework aims to <b>alleviate the overhead associated with common activities performed in web development</b>. For example, many frameworks <b>provide libraries for database access, templating frameworks and session management</b>, and they often promote code reuse.
+			</p>
+		</section>
+
+
+		<section>
+			<section id="fragments">
+				<h2>Fragments</h2>
+				<p>Hit the next arrow...</p>
+				<p class="fragment">... to step through ...</p>
+				<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+				<aside class="notes">
+					This slide has fragments which are also stepped through in the notes window.
+				</aside>
+			</section>
+			<section>
+				<h2>Fragment Styles</h2>
+				<p>There's different types of fragments, like:</p>
+				<p class="fragment grow">grow</p>
+				<p class="fragment shrink">shrink</p>
+				<p class="fragment roll-in">roll-in</p>
+				<p class="fragment fade-out">fade-out</p>
+				<p class="fragment current-visible">current-visible</p>
+				<p class="fragment highlight-red">highlight-red</p>
+				<p class="fragment highlight-blue">highlight-blue</p>
+			</section>
+		</section>
+
+
+		<section>
+			<h2>Pretty Code</h2>
+			<pre><code data-trim contenteditable>
+function linkify( selector ) {
+	if( supports3DTransforms ) {
+
+		var nodes = document.querySelectorAll( selector );
+
+		for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+			var node = nodes[i];
+
+			if( !node.className ) {
+				node.className += ' roll';
+			}
+		}
+	}
+}
+					</code></pre>
+			<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+		</section>
+
+		<section>
+			<h2>Marvelous List</h2>
+			<ul>
+				<li>No order here</li>
+				<li>Or here</li>
+				<li>Or here</li>
+				<li>Or here</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Fantastic Ordered List</h2>
+			<ol>
+				<li>One is smaller than...</li>
+				<li>Two is smaller than...</li>
+				<li>Three!</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Tabular Tables</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Value</th>
+						<th>Quantity</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Apples</td>
+						<td>$1</td>
+						<td>7</td>
+						<tr>
 							<tr>
 								<td>Lemonade</td>
 								<td>$2</td>
 								<td>18</td>
-							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
-						</tbody>
-					</table>
-				</section>
+								<tr>
+									<tr>
+										<td>Bread</td>
+										<td>$3</td>
+										<td>2</td>
+										<tr>
+										</tbody>
+									</table>
+								</section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+								<section>
+									<h2>Clever Quotes</h2>
+									<p>
+										These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+											&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+									</p>
+									<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+										&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+										reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+									</blockquote>
+								</section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+								<section>
+									<h2>Intergalactic Interconnections</h2>
+									<p>
+										You can link between slides internally,
+										<a href="#/2/3">like this</a>.
+									</p>
+								</section>
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+								<section>
+									<h2>Speaker View</h2>
+									<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+									<p>Press the <em>S</em> key to try it out.</p>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+									<aside class="notes">
+										Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+									</aside>
+								</section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+								<section>
+									<h2>Export to PDF</h2>
+									<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
+									<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+								</section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+								<section>
+									<h2>Global State</h2>
+									<p>
+										Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+										will be added as a class to the document element when the slide is open. This lets you
+										apply broader style changes, like switching the page background.
+									</p>
+								</section>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+								<section data-state="customevent">
+									<h2>State Events</h2>
+									<p>
+										Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+									</p>
+									<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 Reveal.addEventListener( 'customevent', function() {
 	console.log( '"customevent" has fired' );
 } );
 					</code></pre>
-				</section>
+								</section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+								<section>
+									<h2>Take a Moment</h2>
+									<p>
+										Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+									</p>
+								</section>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+								<section>
+									<h2>Much more</h2>
+									<ul>
+										<li>Right-to-left support</li>
+										<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
+										<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
+										<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
+										<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+									</ul>
+								</section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+								<section style="text-align: left;">
+									<h1>THE END</h1>
+									<p>
+										- <a href="http://slides.com">Try the online editor</a> <br>
+										- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+									</p>
+								</section>
 
-			</div>
+							</div>
 
-		</div>
+						</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+						<script src="lib/js/head.min.js"></script>
+						<script src="js/reveal.js"></script>
 
-		<script>
+						<script>
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+							// Full list of configuration options available at:
+											// https://github.com/hakimel/reveal.js#configuration
+											Reveal.initialize({
+											controls: true,
+										progress: true,
+										history: true,
+										center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+										transition: 'convex', // none/fade/slide/convex/concave/zoom
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+										// Optional reveal.js plugins
+										dependencies: [
+											{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+											{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+											{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+											{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+											{ src: 'plugin/zoom-js/zoom.js', async: true },
+											{ src: 'plugin/notes/notes.js', async: true }
+										]
+							});
 
-		</script>
+						</script>
 
-	</body>
-</html>
+					</body>
+				</html>

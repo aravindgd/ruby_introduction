@@ -1,0 +1,6 @@
+puts "1 is a #{1.class}"
+puts "1.4 is a #{1.5.class}"
+puts "hello is a #{"hello".class}"
+puts "[1, 2, 3] is a #{[1, 2, 3].class}"
+puts "[a, b, c] is a #{["a", "b", "c"].class}"
+puts "{key: 1, 'key' => 1,  1 => 2, :test => 'test_string'} is a #{{key: 1, 'key' => 1, 1 => 2, :test => 'test_string'}.class}"
