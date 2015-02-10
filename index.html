@@ -346,6 +346,8 @@ see the magic: 1.2/2 = 0.6
 				</ul>
 			</section>
 			<section><pre><code>
+a = 10
+b = 2
 puts "a = #{a}"
 puts "b = #{b}"
 puts "a &lt; b = #{a&lt;b}"
@@ -362,7 +364,7 @@ puts "true || false = #{true || false}"
 
 </code></pre>
 		</section>
-			<section><pre><code>
+		<section><pre><code>
 OUTPUT:
 a = 10
 b = 2
@@ -379,25 +381,26 @@ true || true = true
 true || false = true
 
 </code></pre>
-		</section>
+	</section>
 
-		<section>
-			<h2> Almost Everything in Ruby in an object </h2>
-			<img src="watwatwat.jpg">
-			<p> Don't panic! We will understand what this means gradually, but this is essential to keep in mind!</p>
-		</section>
+	<section>
+		<h2> Almost Everything in Ruby in an object </h2>
+		<img src="watwatwat.jpg">
+		<p> Don't panic! We will understand what this means gradually, but this is essential to keep in mind!</p>
+	</section>
 
-		<section>
-			<h2> Data Types </h2>
+	<section>
+		<h2> Data Types </h2>
 
-			<big> There are <b>NO</b> primitive data types in Ruby, most of what you learned as primitive datatypes are objects here</big>
-			<pre><code>
+		<big> There are <b>NO</b> primitive data types in Ruby, most of what you learned as primitive datatypes are objects here</big>
+		<pre><code>
 puts "1 is a #{1.class}"
 puts "1.4 is a #{1.5.class}"
 puts "hello is a #{"hello".class}"
 puts "[1, 2, 3] is a #{[1, 2, 3].class}"
 puts "[a, b, c] is a #{["a", "b", "c"].class}"
 puts "{key: 1, 'key' =&gt; 1,  1 =&gt; 2, :test =&gt; 'test_string'} is a #{{key: 1, 'key' =&gt; 1, 1 =&gt; 2, :test =&gt; 'test_string'}.class}"
+1..2.classputs "1..2 is a #{(1..2).class}"
 
 1 is a Fixnum
 1.4 is a Float
@@ -405,229 +408,447 @@ hello is a String
 [1, 2, 3] is a Array
 [a, b, c] is a Array
 {key: 1, 'key' =&gt; 1,  1 =&gt; 2, :test =&gt; 'test_string'} is a Hash
-
-
+1..2 is a Range
 			</code></pre>
-		</section>
+	</section>
 
+	<section>
+		<h2> Integer </h2>
+		Let's try a few things in irb
+	</section>
 
-		<section>
-			<h2> What is a web application framework?</h2>
-			<p>
-				A web application framework (WAF) is a software framework that is designed to support the development of dynamic websites, web applications, web services and web resources. The framework aims to <b>alleviate the overhead associated with common activities performed in web development</b>. For example, many frameworks <b>provide libraries for database access, templating frameworks and session management</b>, and they often promote code reuse.
-			</p>
-		</section>
+	<section>
+		<h2> String </h2>
+		Let's try a few things in irb
+	</section>
 
+	<section>
+		<h2> Float </h2>
+		Let's try a few things in irb
+	</section>
 
-		<section>
-			<section id="fragments">
-				<h2>Fragments</h2>
-				<p>Hit the next arrow...</p>
-				<p class="fragment">... to step through ...</p>
-				<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+	<section>
+		<h2> Arrays </h2>
+		Let's try a few things in irb
+	</section>
 
-				<aside class="notes">
-					This slide has fragments which are also stepped through in the notes window.
-				</aside>
-			</section>
-			<section>
-				<h2>Fragment Styles</h2>
-				<p>There's different types of fragments, like:</p>
-				<p class="fragment grow">grow</p>
-				<p class="fragment shrink">shrink</p>
-				<p class="fragment roll-in">roll-in</p>
-				<p class="fragment fade-out">fade-out</p>
-				<p class="fragment current-visible">current-visible</p>
-				<p class="fragment highlight-red">highlight-red</p>
-				<p class="fragment highlight-blue">highlight-blue</p>
-			</section>
-		</section>
-
-
-		<section>
-			<h2>Pretty Code</h2>
-			<pre><code data-trim contenteditable>
-function linkify( selector ) {
-	if( supports3DTransforms ) {
-
-		var nodes = document.querySelectorAll( selector );
-
-		for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-			var node = nodes[i];
-
-			if( !node.className ) {
-				node.className += ' roll';
-			}
-		}
-	}
-}
-					</code></pre>
-			<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+	<section>
+		<h2> Hash </h2>
+		<p> Hashes are made of key value pairs, values can also contain any ruby objects including hash, integer, symbol, string, array, float.
+			Hashes are written between {} and each key value pair is seperated by a comma.
+			<pre><code>ex = {a: 1,  "a1": "with a string",  test: [1,  2,  3],  "b" =&gt; "old syntax for declaring key value pair",  :b1 =&gt; "another try of the old syntax"}
+puts "ex = #{ex}"
+puts "ex[:a] =  #{ex[:a]}"
+puts "ex[:a] = #{ex['a']}"
+puts "ex[:test] = #{ex[:test]}"
+puts "ex['b'] = #{ex['b']}"
+puts "ex[:b] = #{ex[:b1]}"</pre></code>
 		</section>
 
 		<section>
-			<h2>Marvelous List</h2>
-			<ul>
-				<li>No order here</li>
-				<li>Or here</li>
-				<li>Or here</li>
-				<li>Or here</li>
-			</ul>
+			OUTPUT:
+			<pre><code>ex = {:a=&gt;1, :a1=&gt;"with a string", :test=&gt;[1, 2, 3], "b"=&gt;"old syntax for declaring key value pair", :b1=&gt;"another try of the old syntax"}
+ex[:a] =  1
+ex[:a] = 
+ex[:test] = [1, 2, 3]
+ex['b'] = old syntax for declaring key value pair
+ex[:b] = another try of the old syntax</pre></code>
 		</section>
 
 		<section>
-			<h2>Fantastic Ordered List</h2>
-			<ol>
-				<li>One is smaller than...</li>
-				<li>Two is smaller than...</li>
-				<li>Three!</li>
-			</ol>
+			<h2> Range </h2>
+			<pre><code>
+(1..10).each do |num|
+	puts num
+end
+
+OUTPUT:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+		</pre></code>
 		</section>
 
 		<section>
-			<h2>Tabular Tables</h2>
-			<table>
-				<thead>
-					<tr>
-						<th>Item</th>
-						<th>Value</th>
-						<th>Quantity</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Apples</td>
-						<td>$1</td>
-						<td>7</td>
-						<tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-								<tr>
-									<tr>
-										<td>Bread</td>
-										<td>$3</td>
-										<td>2</td>
-										<tr>
-										</tbody>
-									</table>
-								</section>
+			<h2> Conditional statements </h2>
+			<pre><code>a = 10
+if a.even?
+	puts "a is even"
+end
+b = 11
+if !b.even?
+	puts "using ! symbol"
+	puts "a is odd"
+end
+if not b.even?
+	puts "using `not`"
+	puts "a is odd"
+end
+if a &lt; 10
+	puts "less than 10"
+elsif a &lt;= 10
+	puts "greater or equal to 10"
+end
+unless a.odd? 
+	puts "lets see if unless works,  this same as saying `if not` "
+	puts "a is even"
+end</code></pre>
+		</section>
 
-								<section>
-									<h2>Clever Quotes</h2>
-									<p>
-										These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-											&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-									</p>
-									<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-										&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-										reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-									</blockquote>
-								</section>
+		<section>
+			OUTPUT:
+			<pre><code>a is even
+using ! symbol
+a is odd
+using `not`
+a is odd
+greater or equal to 10
+lets see if unless works,  this same as saying `if not` 
+a is even</pre></code>
+		</section>
 
-								<section>
-									<h2>Intergalactic Interconnections</h2>
-									<p>
-										You can link between slides internally,
-										<a href="#/2/3">like this</a>.
-									</p>
-								</section>
+		<section>
+			<h2> Single line conditions</h2>
+			<pre><code>a = 10
+puts "check out the awesome single line conditions!!"
+puts "a is even" if a.even?
+puts "a is even with unless" unless a.odd?</code></pre>
+		</section>
 
-								<section>
-									<h2>Speaker View</h2>
-									<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-									<p>Press the <em>S</em> key to try it out.</p>
+		<section>
+			<pre><code>check out the awesome single line conditions!!
+a is even
+a is even with unless</code></pre>
+	</section>
 
-									<aside class="notes">
-										Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-									</aside>
-								</section>
+	<section>
+		<h2> While and Until Loop </h2>
+		<pre><code>a = 0
+puts "a = #{a}"
+puts "while"
+while a &lt; 10
+	puts "a: #{a}"
+	a += 1
+end
+b = 0
+puts "b = #{b}"
+puts "until"
+until b &gt; 10
+	puts "b: #{b}"
+	b += 1
+end</code></pre>
+	</section>
 
-								<section>
-									<h2>Export to PDF</h2>
-									<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-									<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-								</section>
+	<section>
+		OUTPUT:
+		<pre><code>while
+a: 0
+a: 1
+a: 2
+a: 3
+a: 4
+a: 5
+a: 6
+a: 7
+a: 8
+a: 9
+until
+b: 0
+b: 1
+b: 2
+b: 3
+b: 4
+b: 5
+b: 6
+b: 7
+b: 8
+b: 9
+b: 10</code></pre>
+	</section>
 
-								<section>
-									<h2>Global State</h2>
-									<p>
-										Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-										will be added as a class to the document element when the slide is open. This lets you
-										apply broader style changes, like switching the page background.
-									</p>
-								</section>
+	<section>
+		<h2> Wan't to loop x times? Use times! </h2>
+		<pre><code>2.times do |x|
+	puts "Hello Folks!"
+end</code></pre>
+	</section>
 
-								<section data-state="customevent">
-									<h2>State Events</h2>
-									<p>
-										Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-									</p>
-									<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-								</section>
+	<section>
+		<h2> Each explained </h2>
+		<p> Use each to loop through each element of an array</p>
+<pre><code>[1,2,3,4].each do |num|
+	puts "#{num} is even" if num.even?
+	puts "#{num} is odd" if num.odd?
+end	
 
-								<section>
-									<h2>Take a Moment</h2>
-									<p>
-										Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-									</p>
-								</section>
+OUTPUT:
+1 is odd
+2 is even
+3 is odd
+4 is even</code></pre>
+	</section>
 
-								<section>
-									<h2>Much more</h2>
-									<ul>
-										<li>Right-to-left support</li>
-										<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-										<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-										<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-										<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-									</ul>
-								</section>
+	<section>
+		<h2> Case statements </h2>
+<pre><code>(1..25).each do |a|
+b = a%4
+case b
+	when 1
+		puts "one"
+	when 2
+		puts "two"
+	when 3
+		puts "three"
+	else
+		puts "some other number"
+end
+</pre></code>
 
-								<section style="text-align: left;">
-									<h1>THE END</h1>
-									<p>
-										- <a href="http://slides.com">Try the online editor</a> <br>
-										- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-									</p>
-								</section>
+	</section>
 
-							</div>
+	<section>
+		OUTPUT:
+		<pre><code>1
+one
+2
+two
+3
+three
+4
+some other number
+5
+one
+6
+two
+7
+three
+8
+some other number
+9
+one
+10
+two
+11
+three
+12
+some other number
+13
+one
+14
+two
+15
+three
+16
+some other number
+17
+one
+18
+two
+19
+three
+20
+some other number
+21
+one
+22
+two
+23
+three
+24
+some other number
+25
+one</code></pre>
+	</section>
 
-						</div>
+	<section>
+		<h2> Methods or functions </h2>
+		<p> The last line of the methods is always returned or we can use return keyword</p>
+		<pre><code> def shout(val)
+	puts val.upcase
+end
+def add_array(val)
+	sum = 0
+	val.each do |x|
+		sum += x
+	end
+	puts "sum = #{sum}"
+end
+def summa
+	puts "hello testing explicit return"
+	return 
+	puts "this won't execute"
+end
+shout("test")
+add_array([1,2,3])
+summa
+		</code></pre>
+	</section>
 
-						<script src="lib/js/head.min.js"></script>
-						<script src="js/reveal.js"></script>
+	<section>
+		<pre><code>TEST
+sum = 6
+hello testing explicit return</code></pre>
+</section>
 
-						<script>
+<section>
+	<h2> Class </h2>
+	A class can be used in another class using the `require` statement
+	A class can have a constructor method and various other methods
+	<pre><code>class Customer
+	def initialize(customer_name, age)
+		@customer_name = customer_name
+		@age = age
+	end
 
-							// Full list of configuration options available at:
-											// https://github.com/hakimel/reveal.js#configuration
-											Reveal.initialize({
-											controls: true,
-										progress: true,
-										history: true,
-										center: true,
+	def show
+		puts @customer_name
+		puts @age
+	end
 
-										transition: 'convex', // none/fade/slide/convex/concave/zoom
+end
+customer = Customer.new("Aravind", "22")
+customer.show
 
-										// Optional reveal.js plugins
-										dependencies: [
-											{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-											{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-											{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-											{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-											{ src: 'plugin/zoom-js/zoom.js', async: true },
-											{ src: 'plugin/notes/notes.js', async: true }
-										]
-							});
+OUTPUT:
+Aravind
+22</code></pre>
+</section>
 
-						</script>
+<section>
+	<h2> Instance Variables </h2>
+	<p> Variables that are set for the lifetime of an object and is available to all the methods of a class once initialized </p>
+	<p> Initial value is null </p>
+	<p> Instance variables start with at(@) symbol</p>
+</section>
 
-					</body>
-				</html>
+<section>
+	<h2> class with inheritance </h2>
+	<p> Inheritance is acheived with `child_class &lt; parent_class` syntax </p>
+<pre><code>
+class Calculator
+	def add
+		puts @var1+@var2
+	end
+end
+class ComplexCalculator &lt; Calculator
+	def initialize(var1, var2)
+		@var1 = var1
+		@var2 = var2
+	end
+end
+test = ComplexCalculator.new(1,2)
+test.add
+
+OUTPUT:
+3
+</code></pre>
+</section>
+
+<section>
+	<h2> Modules </h2>
+	<p> Modules are simply a set of code that can be attached to any other file in ruby </p>
+	<p> Modules can hold together any set of data, it can even hold together two or more classes in it </p>
+	<p> They are not initialized, they are just included inside another class or Module </p>
+</section>
+
+<section>
+	<h2> What is a web application framework?</h2>
+	<p>
+		A web application framework (WAF) is a software framework that is designed to support the development of dynamic websites, web applications, web services and web resources. The framework aims to <b>alleviate the overhead associated with common activities performed in web development</b>. For example, many frameworks <b>provide libraries for database access, templating frameworks and session management</b>, and they often promote code reuse.
+	</p>
+</section>
+
+<section>
+	<h2> Hello to Ruby on Rails</h2>
+
+</section>
+
+<section>
+	<h2> Main philosophies of Ruby on Rails </h2>
+	<ul>
+		<li> DRY </li>
+		<li> Convention over configuration </li>
+	</ul>
+
+</section>
+
+<section>
+	<h2> MVC Architecture </h2>
+	<img src="mvc.png">
+
+</section>
+
+<section>
+	<h2> Learn about each folder </h2>
+
+</section>
+
+<section>
+	<h2> Let's get our hands dirty and create a basic blog! </h2>
+
+</section>
+
+<section>
+	<h2> Let's implement authentication with the Devise gem </h2>
+
+</section>
+
+<section>
+	<h2> What about other gems, how do I find them? </h2>
+	<ul>
+		<li> rubygems.org </li>
+		<li> ruby-toolbox.org </li>
+		<li> github.org </li>
+	</ul>
+</section>
+
+<section>
+	<h2> What now? </h2>
+	<ul>
+		<li>  </li>
+		<li> ruby-toolbox.org </li>
+		<li> github.org </li>
+	</ul>
+</section>
+
+					</div>
+
+				</div>
+
+				<script src="lib/js/head.min.js"></script>
+				<script src="js/reveal.js"></script>
+
+				<script>
+
+					// Full list of configuration options available at:
+				// https://github.com/hakimel/reveal.js#configuration
+				Reveal.initialize({
+					controls: true,
+					progress: true,
+					history: true,
+					center: true,
+
+					transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+					// Optional reveal.js plugins
+					dependencies: [
+						{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+						{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+						{ src: 'plugin/zoom-js/zoom.js', async: true },
+						{ src: 'plugin/notes/notes.js', async: true }
+					]
+				});
+
+				</script>
+
+			</body>
+		</html>
