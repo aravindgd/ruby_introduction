@@ -1,268 +1,274 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>Introduction to Ruby on Rails - Web development that doesn’t hurt</title>
+    <title>Introduction to Ruby</title>
 
-		<meta name="description" content="A framework for building web applications">
-		<meta name="author" content="Aravind Gopalakrishnan">
+    <meta name="description" content="A framework for building web applications">
+    <meta name="author" content="Aravind Gopalakrishnan">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+  <body>
 
-	<body>
+    <div class="reveal">
 
-		<div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1> Introduction to Ruby</h1>
+          <h3>A dynamic, free programming language with a focus on simplicity and productivity.</h3>
+          <p>
+            <small>by Aravind Gopalakrishnan / <a href="http://twitter.com/aravindgd">@aravindgd</a></small>
+          </p>
+        </section>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					Introduction to
-					<h1>Ruby on Rails</h1>
-					<h3>Web development that doesn’t hurt</h3>
-					<p>
-						<small>by Aravind Gopalakrishnan / <a href="http://twitter.com/aravindgd">@aravindgd</a></small>
-					</p>
-				</section>
+        <section>
+          <h2>Hello There</h2>
+          <p>
+            We are going to learn Ruby.
+          </p>
+        </section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						We are going to learn Ruby on Rails to build Web Applications.
-					</p>
-				</section>
+        <section>
+          <img src="Your meme technical session_ .jpg">
+        </section>
 
-				<section>
-					<h2>Why Ruby?</h2>
-					<ul>
-						<li> Highly readable </li>
-						<li> There is more than one way of doing something </li>
-						<li> Sapir-Whorf hypothesis</li>
-						<li> Ruby is like the English language </li>
-						<li> Ability to easily build DSLs </li>
-						<li> Moore's Law: Number of transistors in LSI double every 18 months </li>
-						<li> Fast 'enough' </li>
-					</ul>
-				</section>
+        <section>
+          <h2> What is Ruby? </h2>
+          <p>Ruby is a dynamic,  reflective,  object-oriented,  general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.</p>
+        </section>
 
-				<section>
-					<h2>There is more than one way of doing something</h2>
+        <section>
+          <img src="Matz.jpg">
+        </section>
+
+        <section>
+          <h2>Why Ruby?</h2>
+          <ul>
+            <li> Highly readable </li>
+            <li> There is more than one way of doing something </li>
+            <li> Sapir-Whorf hypothesis</li>
+            <li> Ruby is like the English language </li>
+            <li> Ability to easily build DSLs </li>
+            <li> Moore's Law: Number of transistors in LSI double every 18 months </li>
+            <li> Fast 'enough' </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>There is more than one way of doing something</h2>
 <pre>
-						<code>
-you = "aravind"
+                        <code>you = "aravind"
 unless you == "aravind"
-	puts "good boy"
+    puts "good boy"
 end
 #the below is same as above
 you = "aravind"
 if not you == "aravind"
-	puts "good boy"
-end
-						</code>
-					</pre>	
-				</section>
+    puts "good boy"
+end </code>
+                    </pre>	
+        </section>
 
-				<section>
-					<h2>Sapir-Whorf hypothesis</h2>
-					<p>
-						Languages determine the way we think
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<small> *An interesting <a href= "http://edge.org/conversation/how-does-our-language-shape-the-way-we-think">read</a></small>
-					</p>
-				</section>
+        <section>
+          <h2>Sapir-Whorf hypothesis</h2>
+          <p>
+            Languages determine the way we think
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <small> *An interesting <a href= "http://edge.org/conversation/how-does-our-language-shape-the-way-we-think">read</a></small>
+          </p>
+        </section>
 
-				<section>
-					<h2>Ruby is like the English language</h2>
-					<pre>
-							<code>
-5.times { print "I love Pondy" }
+        <section>
+          <h2>Ruby is like the English language</h2>
+            <pre><code>5.times { print "I love Pondy" }
 exit unless "workshop".include? "cool stuff"
-['vijay', 'ajith', 'rajini'].each { |name| puts name.capitalize  }
-							</code>
-						</pre>
-				</section>
+['vijay', 'ajith', 'rajini'].each { |name| puts name.capitalize  }</code>
+                        </pre>
+        </section>
 
-				<section>
-					<h2>Ability to easily build *DSL</h2>
-					Example of DSL: 
-					<pre>
-						<code>
+        <section>
+          <h2>Ability to easily build *DSL</h2>
+          Example of DSL: 
+          <pre>
+                        <code>
 resources :consulting_location_doctor_schedules
 namespace :admin do
-	resources :appointments, except: [:new, :create, :edit, :update] do
-		get :cancel_appointment, on: :member
-		get :users, on: :collection
-		get :doctors, on: :collection
-		get :confirm_appointment, on: :member
-	end
+    resources :appointments, except: [:new, :create, :edit, :update] do
+        get :cancel_appointment, on: :member
+        get :users, on: :collection
+        get :doctors, on: :collection
+        get :confirm_appointment, on: :member
+    end
 end
-						</code>
-					</pre>
-					<br>
-					<br>
-					<br>
-					<hr>
-					<small>
-						*<a href="http://www.martinfowler.com/bliki/DomainSpecificLanguage.html">Domain Specific Language(DSL)</a> is “a programming language of limited expressiveness focused on a particular domain”. A way to express a logic specific to a particular domain without needing to write too much extraneous code 
-					</small>
-				</section>
+                        </code>
+                    </pre>
+          <br>
+          <br>
+          <br>
+          <hr>
+          <small>
+            *<a href="http://www.martinfowler.com/bliki/DomainSpecificLanguage.html">Domain Specific Language(DSL)</a> is “a programming language of limited expressiveness focused on a particular domain”. A way to express a logic specific to a particular domain without needing to write too much extraneous code 
+          </small>
+        </section>
 
-				<section>
-					<h2>Highly Readable</h2>
-					<pre><code data-trim contenteditable>
+        <section>
+          <h2>Highly Readable</h2>
+          <pre><code data-trim contenteditable>
 unless value.blank?
-	puts value.reverse
+    puts value.reverse
 end
-					</code></pre>
-				</section>
+                    </code></pre>
+        </section>
 
-				<section>
-					<h2>Add two numbers in c</h2>
+        <section>
+          <h2>Add two numbers in c</h2>
 
-					<pre><code data-trim contenteditable>
+          <pre><code data-trim contenteditable>
 #include<stdio.h>
 
 int main()
 {
-	 int a, b, c;
+     int a, b, c;
 
-	 a = 1;
-	 b = 2;
+     a = 1;
+     b = 2;
 
-	 c = a + b;
+     c = a + b;
 
-	 printf("Sum of entered numbers = %d\n",c);
+     printf("Sum of entered numbers = %d\n",c);
 
-	 return 0;
+     return 0;
 }
 </code>
 </pre>
-				</section>
-				<section>
-					<h2>Add two numbers in c++</h2>
+        </section>
+        <section>
+          <h2>Add two numbers in c++</h2>
 
-					<pre><code data-trim contenteditable>
+          <pre><code data-trim contenteditable>
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-	 int a, b, c;
-	 a = 1;
-	 b = 2;
-	 c = a + b;
-	 cout <<"Sum of entered numbers = " << c << endl;
+     int a, b, c;
+     a = 1;
+     b = 2;
+     c = a + b;
+     cout <<"Sum of entered numbers = " << c << endl;
 
-	 return 0;
+     return 0;
 }
 </code>
 </pre>
-				</section>
-				<section>
-					<h2> Add two numbers in java </h2>
-					<pre><code data-trim contenteditable>
+        </section>
+        <section>
+          <h2> Add two numbers in java </h2>
+          <pre><code data-trim contenteditable>
 class AddNumbers
 {
-	 public static void main(String args[])
-	 {
-			int x, y, z;
-			x = 1;
-			y = 2;
-			z = x + y;
-			System.out.println("Sum of entered integers = "+z);
-	 }
+     public static void main(String args[])
+     {
+            int x, y, z;
+            x = 1;
+            y = 2;
+            z = x + y;
+            System.out.println("Sum of entered integers = "+z);
+     }
 }
 </code>
 </pre>
-				</section>
+        </section>
 
-				<section>
-					<img src="aint_nobody_got_time_for_that.jpeg">
-				</section>
+        <section>
+          <img src="aint_nobody_got_time_for_that.jpeg">
+        </section>
 
-				<section>
-					<h2> Add two numbers in ruby</h2>
-					<pre><code data-trim contenteditable>
+        <section>
+          <h2> Add two numbers in ruby</h2>
+          <pre><code data-trim contenteditable>
 a,b = 1,2
 puts a+b
-				</code></pre>
+                </code></pre>
 
-					<img src="ruby_y_u_so_easy.jpg">
-				</section>
+          <img src="ruby_y_u_so_easy.jpg">
+        </section>
 
-				<section>
-					<h2> License </h2>
-					<p> Ruby License </p>
-					<blockquote> The Free Software Foundation comments: "This is a free software licence, compatible with the GPL via an explicit dual-licensing clause."</blockquote>
-				</section>
+        <section>
+          <h2> License </h2>
+          <p> Ruby License </p>
+          <blockquote> The Free Software Foundationomments: "This is a free software licence, compatible with the GPL via an explicit dual-licensing clause."</blockquote>
+        </section>
 
-				<section>
-					<h3> We will learn MRI ruby version 2.2.0 </h3> <img src="Ruby_logo.png" height="150" width="150">
-					<p>Matz's Ruby Interpreter or Ruby MRI (also called CRuby) is the reference implementation of the Ruby programming language named after Ruby creator Yukihiro Matsumoto ("Matz")</p>
-					<p> Some other famous implementation of Ruby </p>
-					<ul>
-						<li> JRuby </li>
-						<li> Rubinious </li>
-						<li> IronRuby </li>
-					</ul>
+        <section>
+          <h3> We will learn MRI ruby version 2.2.0 </h3> <img src="Ruby_logo.png" height="150" width="150">
+          <p>Matz's Ruby Interpret</h2>er or Ruby MRI (also called CRuby) is the reference implementation of the Ruby programming language named after Ruby creator Yukihiro Matsumoto ("Matz")</p>
+          <p> Some other famous implementation of Ruby </p>
+          <ul>
+            <li> JRuby </li>
+            <li> Rubinious </li>
+            <li> IronRuby </li>
+          </ul>
 
-				</section>
+        </section>
 
-				<section>
-					<h2> Some more fun facts about ruby </h2>
-					<ul>
-						<li> Ruby is a fully object oriented programming language </li>
-						<li> Ruby is a interpreted language </li>
-						<li> Ruby comes with a default interpreter called irb, invoke it by typing `irb` in terminal </li>
-						<li> Ruby MRI is written in C </li>
-						<li> Ruby has file extension `.rb` and executed as 'ruby filename.rb'
-						</ul>
-					<pre><code>ruby filename.rb</code></pre>
-					</section>
+        <section>
+          <h2> Some more fun facts about ruby </h2>
+          <ul>
+            <li> Ruby is a fully object oriented programming language </li>
+            <li> Ruby is a interpreted language </li>
+            <li> Ruby comes with a default interpreter called irb, invoke it by typing `irb` in terminal </li>
+            <li> Ruby MRI is written in C </li>
+            <li> Ruby has file extension `.rb` and executed as 'ruby filename.rb'
+            </ul>
+                    <pre><code>ruby filename.rb</code></pre>
+          </section>
 
-					<section>
-						<h2> Comments in Ruby </h2>
-						<pre><code data-trim contenteditable>
+          <section>
+            <h2> Comments in Ruby </h2>
+            <pre><code data-trim contenteditable>
 #Hello I am comment
 #I am a comment again
 =begin
-	This is a multi line comment. This is discouraged though. Rather than this just use hash syntax with hash before each line. This is discouraged because it does not look well in big code blocks.
+    This is a multi line comment. This is discouraged though. Rather than this just use hash syntax with hash before each line. This is discouraged because it does not look well in big code blocks.
 =end
-				</code></pre>
-					</section>
+                </code></pre>
+          </section>
 
-					<section>
-						<h2>Variables in Ruby and printing them</h2>
-						<pre><code>
+          <section>
+            <h2>Variables in Ruby and printing them</h2>
+            <pre><code>
 string_ex = "asd"
 integer_ex = 2
 1a = "test" #not valid
@@ -273,34 +279,34 @@ puts "integer_ex = #{integer_ex}"
 puts "a1 = #{a1}"
 p var
 
-					</code></pre>
-						OUTPUT:
-						<code><pre>
+                    </code></pre>
+            OUTPUT:
+            <code><pre>
 string_ex = asd
 integer_ex = 2
 a1 = test
 I am a var
 </code></pre>
-					</section>
+          </section>
 
-					<section>
-						<h2> Arithmetics in ruby </h2>
-						<ul>
-							<li> + plus</li>
-							<li> - minus</li>
-							<li> / slash</li>
-							<li> * asterisk</li>
-							<li> ** powerof </li>
-							<li> % percent</li>
-							<li> &lt; less-than</li>
-							<li> &gt; greater-than</li>
-							<li> &lt; less-than-equal</li>
-							<li> &gt;= greater-than-equal</li>
-						</ul>
-					</section>
+          <section>
+            <h2> Arithmetics in ruby </h2>
+            <ul>
+              <li> + plus</li>
+              <li> - minus</li>
+              <li> / slash</li>
+              <li> * asterisk</li>
+              <li> ** powerof </li>
+              <li> % percent</li>
+              <li> &lt; less-than</li>
+              <li> &gt; greater-than</li>
+              <li> &lt; less-than-equal</li>
+              <li> &gt;= greater-than-equal</li>
+            </ul>
+          </section>
 
-					<section>
-						<pre><code>puts "lets look at some common arithmetics"
+          <section>
+            <pre><code>puts "lets look at some common arithmetics"
 a = 10
 b = 2
 puts "a = #{a}"
@@ -314,9 +320,9 @@ puts "a**b = #{a**b}"
 
 puts "see the magic: 1/1.5 = #{1/1.5}"
 puts "see the magic: 1.2/2 = #{1.2/2}"</code></pre>
-				</section>
-				<section>
-					<pre><code>
+        </section>
+        <section>
+          <pre><code>
 lets look at some common arithmetics
 a = 10
 b = 2
@@ -329,29 +335,29 @@ a**b = 100
 
 see the magic: 1/1.5 = 0.6666666666666666
 see the magic: 1.2/2 = 0.6
-					</code></pre>
-			</section>
+                    </code></pre>
+      </section>
 
-			<section>
-				<img src="programming_or_magic.jpg">
-			</section>
+      <section>
+        <img src="programming_or_magic.jpg">
+      </section>
 
-			<section>
-				<h2> Conditional operators </h2>
-				<ul>
-					<li>&& (and)</li>
-					<li>|| (or)</li>
-					<li>! (not)</li>
-					<li>!= (not equal)</li>
-					<li>== (equal)</li>
-					<li> &gt; greater-than</li>
-					<li> &lt; less-than-equal</li>
-					<li> &gt;= greater-than-equal</li>
-					<li> true </li>
-					<li> false </li>
-				</ul>
-			</section>
-			<section><pre><code>
+      <section>
+        <h2> Conditional operators </h2>
+        <ul>
+          <li>&& (and)</li>
+          <li>|| (or)</li>
+          <li>! (not)</li>
+          <li>!= (not equal)</li>
+          <li>== (equal)</li>
+          <li> &gt; greater-than</li>
+          <li> &lt; less-than-equal</li>
+          <li> &gt;= greater-than-equal</li>
+          <li> true </li>
+          <li> false </li>
+        </ul>
+      </section>
+      <section><pre><code>
 a = 10
 b = 2
 puts "a = #{a}"
@@ -369,8 +375,8 @@ puts "true || true = #{true || true}"
 puts "true || false = #{true || false}"
 
 </code></pre>
-		</section>
-		<section><pre><code>
+    </section>
+    <section><pre><code>
 OUTPUT:
 a = 10
 b = 2
@@ -387,19 +393,19 @@ true || true = true
 true || false = true
 
 </code></pre>
-	</section>
+  </section>
 
-	<section>
-		<h2> Almost Everything in Ruby in an object </h2>
-		<img src="watwatwat.jpg">
-		<p> Don't panic! We will understand what this means gradually, but this is essential to keep in mind!</p>
-	</section>
+  <section>
+    <h2> Almost Everything in Ruby in an object </h2>
+    <img src="watwatwat.jpg">
+    <p> Don't panic! We will understand what this means gradually, but this is essential to keep in mind!</p>
+  </section>
 
-	<section>
-		<h2> Data Types </h2>
+  <section>
+    <h2> Data Types </h2>
 
-		<big> There are <b>NO</b> primitive data types in Ruby, most of what you learned as primitive datatypes are objects here</big>
-		<pre><code>
+    <big> There are <b>NO</b> primitive data types in Ruby, most of what you learned as primitive datatypes are objects here</big>
+    <pre><code>
 puts "1 is a #{1.class}"
 puts "1.4 is a #{1.5.class}"
 puts "hello is a #{"hello".class}"
@@ -415,57 +421,65 @@ hello is a String
 [a, b, c] is a Array
 {key: 1, 'key' =&gt; 1,  1 =&gt; 2, :test =&gt; 'test_string'} is a Hash
 1..2 is a Range
-			</code></pre>
-	</section>
+            </code></pre>
+  </section>
 
-	<section>
-		<h2> Integer </h2>
-		Let's try a few things in irb
-	</section>
+  <section>
+    <h2> Integer </h2>
+    Let's try a few things in irb
+  </section>
 
-	<section>
-		<h2> String </h2>
-		Let's try a few things in irb
-	</section>
+  <section>
+    <h2> String </h2>
+    <ul>
+      <li>How to build a string?</li>
+      <li>Find length</li>
+      <li>String interpolation</li>
+      <li>Search in a string</li>
+      <li>Change the case</li>
+      <li>Split a string</li>
+      <li>Replace Substring</li>
+    </ul>
+  </section>
 
-	<section>
-		<h2> Float </h2>
-		Let's try a few things in irb
-	</section>
+  <section>
+    <h2> Float </h2>
+    Let's try a few things in irb
+  </section>
 
-	<section>
-		<h2> Arrays </h2>
-		Let's try a few things in irb
-	</section>
+  <section>
+    <h2> Arrays </h2>
+    Let's try a few things in irb
+  </section>
 
-	<section>
-		<h2> Hash </h2>
-		<p> Hashes are made of key value pairs, values can also contain any ruby objects including hash, integer, symbol, string, array, float.
-			Hashes are written between {} and each key value pair is seperated by a comma.
-			<pre><code>ex = {a: 1,  "a1": "with a string",  test: [1,  2,  3],  "b" =&gt; "old syntax for declaring key value pair",  :b1 =&gt; "another try of the old syntax"}
+  <section>
+    <h2> Hash </h2>
+    <p> Hashes are made of key value pairs, values can also contain any ruby objects including hash, integer, symbol, string, array, float.
+      Hashes are written between {} and each key value pair is seperated by a comma.
+      <pre><code>ex = {a: 1,  "a1": "with a string",  test: [1,  2,  3],  "b" =&gt; "old syntax for declaring key value pair",  :b1 =&gt; "another try of the old syntax"}
 puts "ex = #{ex}"
 puts "ex[:a] =  #{ex[:a]}"
 puts "ex[:a] = #{ex['a']}"
 puts "ex[:test] = #{ex[:test]}"
 puts "ex['b'] = #{ex['b']}"
 puts "ex[:b] = #{ex[:b1]}"</pre></code>
-		</section>
+    </section>
 
-		<section>
-			OUTPUT:
-			<pre><code>ex = {:a=&gt;1, :a1=&gt;"with a string", :test=&gt;[1, 2, 3], "b"=&gt;"old syntax for declaring key value pair", :b1=&gt;"another try of the old syntax"}
+    <section>
+      OUTPUT:
+      <pre><code>ex = {:a=&gt;1, :a1=&gt;"with a string", :test=&gt;[1, 2, 3], "b"=&gt;"old syntax for declaring key value pair", :b1=&gt;"another try of the old syntax"}
 ex[:a] =  1
 ex[:a] = 
 ex[:test] = [1, 2, 3]
 ex['b'] = old syntax for declaring key value pair
 ex[:b] = another try of the old syntax</pre></code>
-		</section>
+    </section>
 
-		<section>
-			<h2> Range </h2>
-			<pre><code>
+    <section>
+      <h2> Range </h2>
+      <pre><code>
 (1..10).each do |num|
-	puts num
+    puts num
 end
 
 OUTPUT:
@@ -479,38 +493,38 @@ OUTPUT:
 8
 9
 10
-		</pre></code>
-		</section>
+        </pre></code>
+    </section>
 
-		<section>
-			<h2> Conditional statements </h2>
-			<pre><code>a = 10
+    <section>
+      <h2> Conditional statements </h2>
+      <pre><code>a = 10
 if a.even?
-	puts "a is even"
+    puts "a is even"
 end
 b = 11
 if !b.even?
-	puts "using ! symbol"
-	puts "a is odd"
+    puts "using ! symbol"
+    puts "a is odd"
 end
 if not b.even?
-	puts "using `not`"
-	puts "a is odd"
+    puts "using `not`"
+    puts "a is odd"
 end
 if a &lt; 10
-	puts "less than 10"
+    puts "less than 10"
 elsif a &lt;= 10
-	puts "greater or equal to 10"
+    puts "greater or equal to 10"
 end
 unless a.odd? 
-	puts "lets see if unless works,  this same as saying `if not` "
-	puts "a is even"
+    puts "lets see if unless works,  this same as saying `if not` "
+    puts "a is even"
 end</code></pre>
-		</section>
+    </section>
 
-		<section>
-			OUTPUT:
-			<pre><code>a is even
+    <section>
+      OUTPUT:
+      <pre><code>a is even
 using ! symbol
 a is odd
 using `not`
@@ -518,43 +532,43 @@ a is odd
 greater or equal to 10
 lets see if unless works,  this same as saying `if not` 
 a is even</pre></code>
-		</section>
+    </section>
 
-		<section>
-			<h2> Single line conditions</h2>
-			<pre><code>a = 10
+    <section>
+      <h2> Single line conditions</h2>
+      <pre><code>a = 10
 puts "check out the awesome single line conditions!!"
 puts "a is even" if a.even?
 puts "a is even with unless" unless a.odd?</code></pre>
-		</section>
+    </section>
 
-		<section>
-			<pre><code>check out the awesome single line conditions!!
+    <section>
+      <pre><code>check out the awesome single line conditions!!
 a is even
 a is even with unless</code></pre>
-	</section>
+  </section>
 
-	<section>
-		<h2> While and Until Loop </h2>
-		<pre><code>a = 0
+  <section>
+    <h2> While and Until Loop </h2>
+    <pre><code>a = 0
 puts "a = #{a}"
 puts "while"
 while a &lt; 10
-	puts "a: #{a}"
-	a += 1
+    puts "a: #{a}"
+    a += 1
 end
 b = 0
 puts "b = #{b}"
 puts "until"
 until b &gt; 10
-	puts "b: #{b}"
-	b += 1
+    puts "b: #{b}"
+    b += 1
 end</code></pre>
-	</section>
+  </section>
 
-	<section>
-		OUTPUT:
-		<pre><code>while
+  <section>
+    OUTPUT:
+    <pre><code>while
 a: 0
 a: 1
 a: 2
@@ -577,21 +591,21 @@ b: 7
 b: 8
 b: 9
 b: 10</code></pre>
-	</section>
+  </section>
 
-	<section>
-		<h2> Wan't to loop x times? Use times! </h2>
-		<pre><code>2.times do |x|
-	puts "Hello Folks!"
+  <section>
+    <h2> Wan't to loop x times? Use times! </h2>
+    <pre><code>2.times do |x|
+    puts "Hello Folks!"
 end</code></pre>
-	</section>
+  </section>
 
-	<section>
-		<h2> Each explained </h2>
-		<p> Use each to loop through each element of an array</p>
+  <section>
+    <h2> Each explained </h2>
+    <p> Use each to loop through each element of an array</p>
 <pre><code>[1,2,3,4].each do |num|
-	puts "#{num} is even" if num.even?
-	puts "#{num} is odd" if num.odd?
+    puts "#{num} is even" if num.even?
+    puts "#{num} is odd" if num.odd?
 end	
 
 OUTPUT:
@@ -599,29 +613,29 @@ OUTPUT:
 2 is even
 3 is odd
 4 is even</code></pre>
-	</section>
+  </section>
 
-	<section>
-		<h2> Case statements </h2>
+  <section>
+    <h2> Case statements </h2>
 <pre><code>(1..25).each do |a|
 b = a%4
 case b
-	when 1
-		puts "one"
-	when 2
-		puts "two"
-	when 3
-		puts "three"
-	else
-		puts "some other number"
+    when 1
+        puts "one"
+    when 2
+        puts "two"
+    when 3
+        puts "three"
+    else
+        puts "some other number"
 end
 </pre></code>
 
-	</section>
+  </section>
 
-	<section>
-		OUTPUT:
-		<pre><code>1
+  <section>
+    OUTPUT:
+    <pre><code>1
 one
 2
 two
@@ -671,52 +685,52 @@ three
 some other number
 25
 one</code></pre>
-	</section>
+  </section>
 
-	<section>
-		<h2> Methods or functions </h2>
-		<p> The last line of the methods is always returned or we can use return keyword</p>
-		<pre><code> def shout(val)
-	puts val.upcase
+  <section>
+    <h2> Methods or functions </h2>
+    <p> The last line of the methods is always returned or we can use return keyword</p>
+    <pre><code> def shout(val)
+    puts val.upcase
 end
 def add_array(val)
-	sum = 0
-	val.each do |x|
-		sum += x
-	end
-	puts "sum = #{sum}"
+    sum = 0
+    val.each do |x|
+        sum += x
+    end
+    puts "sum = #{sum}"
 end
 def summa
-	puts "hello testing explicit return"
-	return 
-	puts "this won't execute"
+    puts "hello testing explicit return"
+    return 
+    puts "this won't execute"
 end
 shout("test")
 add_array([1,2,3])
 summa
-		</code></pre>
-	</section>
+        </code></pre>
+  </section>
 
-	<section>
-		<pre><code>TEST
+  <section>
+    <pre><code>TEST
 sum = 6
 hello testing explicit return</code></pre>
 </section>
 
 <section>
-	<h2> Class </h2>
-	A class can be used in another class using the `require` statement
-	A class can have a constructor method and various other methods
-	<pre><code>class Customer
-	def initialize(customer_name, age)
-		@customer_name = customer_name
-		@age = age
-	end
+  <h2> Class </h2>
+  A class can be used in another class using the `require` statement
+  A class can have a constructor method and various other methods
+  <pre><code>class Customer
+    def initialize(customer_name, age)
+        @customer_name = customer_name
+        @age = age
+    end
 
-	def show
-		puts @customer_name
-		puts @age
-	end
+    def show
+        puts @customer_name
+        puts @age
+    end
 
 end
 customer = Customer.new("Aravind", "22")
@@ -728,26 +742,26 @@ Aravind
 </section>
 
 <section>
-	<h2> Instance Variables </h2>
-	<p> Variables that are set for the lifetime of an object and is available to all the methods of a class once initialized </p>
-	<p> Initial value is null </p>
-	<p> Instance variables start with at(@) symbol</p>
+  <h2> Instance Variables </h2>
+  <p> Variables that are set for the lifetime of an object and is available to all the methods of a class once initialized </p>
+  <p> Initial value is null </p>
+  <p> Instance variables start with at(@) symbol</p>
 </section>
 
 <section>
-	<h2> class with inheritance </h2>
-	<p> Inheritance is acheived with `child_class &lt; parent_class` syntax </p>
+  <h2> class with inheritance </h2>
+  <p> Inheritance is acheived with `child_class &lt; parent_class` syntax </p>
 <pre><code>
 class Calculator
-	def add
-		puts @var1+@var2
-	end
+    def add
+        puts @var1+@var2
+    end
 end
 class ComplexCalculator &lt; Calculator
-	def initialize(var1, var2)
-		@var1 = var1
-		@var2 = var2
-	end
+    def initialize(var1, var2)
+        @var1 = var1
+        @var2 = var2
+    end
 end
 test = ComplexCalculator.new(1,2)
 test.add
@@ -758,111 +772,89 @@ OUTPUT:
 </section>
 
 <section>
-	<h2> Modules </h2>
-	<p> Modules are simply a set of code that can be attached to any other file in ruby </p>
-	<p> Modules can hold together any set of data, it can even hold together two or more classes in it </p>
-	<p> They are not initialized, they are just included inside another class or Module </p>
+  <h2> Modules </h2>
+  <p> Modules are simply a set of code that can be attached to any other file in ruby </p>
+  <p> Modules can hold together any set of data, it can even hold together two or more classes in it </p>
+  <p> They are not initialized, they are just included inside another class or Module </p>
+</section>
+
+
+<section>
+  <h2> What now? </h2>
+  <ul>
+    <li> railstutorial.org/book </li>
+    <li> ruby-toolbox.org </li>
+    <li> github.org </li>
+    <li> discuss.fsftn.org </li>
+    <li> stackoverflow.com </li>
+    <li> rubymonk.com </li>
+  </ul>
 </section>
 
 <section>
-	<h2> What is a web application framework?</h2>
-	<p>
-		A web application framework (WAF) is a software framework that is designed to support the development of dynamic websites, web applications, web services and web resources. The framework aims to <b>alleviate the overhead associated with common activities performed in web development</b>. For example, many frameworks <b>provide libraries for database access, templating frameworks and session management</b>, and they often promote code reuse.
-	</p>
+  <h2> Other resources </h2>
+  <p>	<b>Slides:</b> https://github.com/aravindgd/ruby_rails_intro_presentation</p>
+  <p> <b>email me:</b> aravind@fsftn.org </p>
 </section>
 
 <section>
-	<h2> Hello to Ruby on Rails</h2>
-	<img src="Ruby_on_Rails.png" width="250" height="350">
+  <h2> Keep reading, coding and hacking to keep in touch with ruby </h2>
 </section>
 
 <section>
-	<h2> License </h2>
-	<p> MIT License </p>
+  <img src="Your meme ahaan .jpg">
 </section>
 
-<section>
-	<h2> Main philosophies of Ruby on Rails </h2>
-	<ul>
-		<li> DRY </li>
-		<li> Convention over configuration </li>
-	</ul>
+                    </div>
 
-</section>
+                  </div>
 
-<section>
-	<h2> MVC Architecture </h2>
-	<img src="mvc.png">
+                  <script src="lib/js/head.min.js"></script>
+                  <script src="js/reveal.js"></script>
 
-</section>
+                  <script>
 
-<section>
-	<h2> Learn about each folder </h2>
+                    document.addEventListener("DOMContentLoaded", init, false);
 
-</section>
+                    function init() {
+                      console.log("Run my init, yo!");
 
-<section>
-	<h2> Let's get our hands dirty and create a basic blog! </h2>
-</section>
+                      var cblocks = document.querySelectorAll("pre code");
 
-<section>
-	<h2> What about other gems, how do I find them? </h2>
-	<ul>
-		<li> rubygems.org </li>
-		<li> ruby-toolbox.org </li>
-		<li> github.org </li>
-	</ul>
-</section>
+                      if(cblocks.length) {
+                        for(var i=0, len=cblocks.length; i<len; i++) {
+                          var dom = cblocks[i];
+                          var html = dom.innerHTML;
+                          html = html.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+                          dom.innerHTML = html;
+                        }
+                      }
 
-<section>
-	<h2> What now? </h2>
-	<ul>
-		<li> railstutorial.org/book </li>
-		<li> ruby-toolbox.org </li>
-		<li> github.org </li>
-		<li> discuss.fsftn.org </li>
-		<li> stackoverflow.com </li>
-		<li> rubymonk.com </li>
-	</ul>
-</section>
 
-<section>
-	<h2> Other resources </h2>
-	<p>	<b>Slides:</b> https://github.com/aravindgd/ruby_rails_intro_presentation</p>
-	<p> <b>email me:</b> aravind@fsftn.org </p>
-</section>
 
-					</div>
+                      // Full list of configuration options available at:
+                      // https://github.com/hakimel/reveal.js#configuration
+                      Reveal.initialize({
+                        controls: true,
+                        progress: true,
+                        history: true,
+                        center: true,
 
-				</div>
+                        transition: 'convex', // none/fade/slide/convex/concave/zoom
 
-				<script src="lib/js/head.min.js"></script>
-				<script src="js/reveal.js"></script>
+                        // Optional reveal.js plugins
+                        dependencies: [
+                          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                          { src: 'plugin/zoom-js/zoom.js', async: true },
+                          { src: 'plugin/notes/notes.js', async: true }
+                        ]
+                      });
+                    }
 
-				<script>
+                  </script>
 
-					// Full list of configuration options available at:
-				// https://github.com/hakimel/reveal.js#configuration
-				Reveal.initialize({
-					controls: true,
-					progress: true,
-					history: true,
-					center: true,
-
-					transition: 'convex', // none/fade/slide/convex/concave/zoom
-
-					// Optional reveal.js plugins
-					dependencies: [
-						{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-						{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-						{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-						{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-						{ src: 'plugin/zoom-js/zoom.js', async: true },
-						{ src: 'plugin/notes/notes.js', async: true }
-					]
-				});
-
-				</script>
-
-			</body>
-		</html>
+                </body>
+              </html>
